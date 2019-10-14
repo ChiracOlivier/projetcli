@@ -10,6 +10,7 @@ import { AppareilComponent } from './appareil/appareil.component';
     AppareilComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule
   ],
   providers: [],
