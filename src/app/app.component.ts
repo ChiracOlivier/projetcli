@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {resolve} from 'url';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
+  lastUpdate = new Promise(
+    // tslint:disable-next-line:no-shadowed-variable
+    (resolve , reject) => {
+      const date = new Date();
+      setTimeout(
+        () => {
+          resolve(date);
+        },
+            2000
+      );
+    });
   appareils = [
    {
   name: 'Machine à laver',
